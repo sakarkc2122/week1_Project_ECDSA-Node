@@ -43,14 +43,15 @@ async function generateKeys() {
     }
 
     // Write the new data to the JSON file
-    fs.writeFileSync(ADDRESS_TO_PK, JSON.stringify(balances));
+    fs.writeFileSync(ADDRESS_TO_PK, JSON.stringify(balances, null, 2));
 
     // Read the updated data from the JSON file
     updatedData = JSON.parse(fs.readFileSync(ADDRESS_TO_PK));
   }
   console.log("Updated file contents:", updatedData);
 }
-generateKeys();
+// generateKeys();
+module.exports = generateKeys;
 
 async function testingAuthentication() {
   const msgHash =

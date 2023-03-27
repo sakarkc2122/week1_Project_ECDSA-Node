@@ -25,14 +25,17 @@ The server folder contains a node.js server using [express](https://expressjs.co
 
 1. Open a terminal within the `/server` folder
 2. Run `npm install` to install all the depedencies
-3. Run `node generate.js`, to generate `address_to_PK.json` file. Its structure: `{walletAddress: [privateKey, publickey, balance]}`
-4. Run `node index` to start the server
+3. Run `node index` to start the server
 
 The application should connect to the default server port (3042) automatically!
 
 _Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` to automatically restart the server on any changes.
 
+_First thing to do in the UI is to generate key_  
+ => Click the `Generate Key` button, that will create 5 wallet address. Those address are stored in `./server/address_to_PK.json` file.  
+ => It structure is `{walletAddress: [privateKey, publicKey, balance]}`
+
 TO DO:
 
-1. To make a generate button in the frontend to generate a wallet address.
-2. To learn to draw a better DFD
+1. To make a generate button in the frontend to generate a wallet address. ✅
+2. To learn to draw a better DFD.
